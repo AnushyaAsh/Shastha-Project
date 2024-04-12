@@ -1,0 +1,26 @@
+
+table {
+    border-collapse: collapse;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid grey;  
+   
+  }
+  th { 
+    
+   
+    border: 1px solid rgb(174, 174, 174);
+   
+  }
+
+td{
+    border: 1px solid rgb(174, 174, 174);
+}
+.searchbar{
+   
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding-left: 5px;
+}

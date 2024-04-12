@@ -1,0 +1,25 @@
+<div class="row ml-0 no-gutters">
+<div class="col-lg-2 col-md-3 col-sm-6 col-6 ">
+<nav *ngIf="showSidebar" class="mat-elevation-z2 sidebar-content" [ngClass]="{'show-sidebar': showSidebar, 'fade-in': showSidebar}">
+  <ul class="nav nav-pills flex-column pt-2">
+    <li class="close-sidebar">
+      <button mat-icon-button (click)="toggleSidebar()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </li>
+    <li *ngIf="showCountryOptions" class="nav-item pb-2">
+      <a routerLink="/add-country" class="nav-link">Add Country</a>
+    </li>
+    <li *ngIf="showCountryOptions" class="nav-item">
+      <a routerLink="/list-country" class="nav-link">List Country</a>
+    </li>
+    <li *ngIf="showUniversityOptions" class="nav-item pb-2">
+      <a routerLink="/add-university" class="nav-link">Add University</a>
+    </li>
+    <li *ngIf="showUniversityOptions" class="nav-item">
+      <a routerLink="/list-university" class="nav-link">List University</a>
+    </li> 
+  </ul>
+</nav>
+</div>
+</div>

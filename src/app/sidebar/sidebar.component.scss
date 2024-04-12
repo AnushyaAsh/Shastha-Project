@@ -1,0 +1,34 @@
+a{
+    text-decoration: none;
+    color: black;
+    padding-left: 30px;
+}
+nav{
+    background-color: rgb(235, 242, 254); 
+    height: 690px;
+    overflow: hidden;
+    transition: 0.2s ease; 
+}
+.fade-in {
+    animation: fadeIn 0.2s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.close-sidebar{
+    align-self: flex-end;
+    padding-right: 10px;
+}
+.sidebar-content li:hover a {
+    background-color: rgb(68, 78, 191); 
+    color: rgb(249, 249, 249);
+    border-radius: 0%;
+  }
+  

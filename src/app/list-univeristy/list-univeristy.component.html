@@ -1,0 +1,49 @@
+<app-layout></app-layout>
+<div *ngIf="universities">
+    <div class="container col-lg-8">
+      <h1 class="pt-4">List of University</h1>
+      <div >
+        <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input class="searchbar" appearance="outline">    
+      </div><br><br>
+      <div *ngIf="loading">
+      <h3> Loading...</h3>
+      </div>
+      <div *ngIf="!loading">
+        <table mat-table [dataSource]="dataSource" matSort>
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+            <td mat-cell *matCellDef="let university"> {{ university.name }} </td>
+          </ng-container>
+      
+          <!-- Country Column -->
+          <ng-container matColumnDef="country">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Country </th>
+            <td mat-cell *matCellDef="let university"> {{ university.country }} </td>
+          </ng-container>
+      
+          <!-- Alpha Two Code Column -->
+          <ng-container matColumnDef="alpha_two_code">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Short Name</th>
+            <td mat-cell *matCellDef="let university"> {{ university.alpha_two_code }} </td>
+          </ng-container>
+      
+          <!-- Web Pages Column -->
+          <ng-container matColumnDef="web_pages">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Web Page </th>
+            <td mat-cell *matCellDef="let university"> {{ university.web_pages }} </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="universities"></tr>
+          <tr mat-row *matRowDef="let row; columns: universities;"></tr>
+        </table><br>
+      </div>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+      </div>
+  </div>
+  
+  
+  
+  

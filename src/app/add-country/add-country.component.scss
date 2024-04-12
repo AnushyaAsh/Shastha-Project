@@ -1,0 +1,23 @@
+.example-container  {
+    background-color: rgba(194, 220, 242, 0.4);
+    padding: 30px 40px 30px;
+    margin-top: 25px;
+}
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+   
+}
+mat-form-field{
+    width: 100%;
+}
+h1{
+    font-weight: 100px;
+    font-size: xx-large;
+    color: rgb(64, 63, 154);
+}
+button{
+    margin-left: 25px;
+
+}
